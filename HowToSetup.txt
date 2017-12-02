@@ -1,14 +1,34 @@
 
+Das Projekt zu Eclipse hinzufügen:
 
-Libraries hinzufügen:
+	Option 1: Einfügen in Eclipse nach manuellem GitHub-Download:
 
-Rechtsklick aufs Projekt, im Popup unten auf "Properties", dann links "Java Build Path" im Tab "Libraries" auf "Add JARS" klicken. Dann zum Verzeichnis "libraries" navigieren und alle 8 .jar-Dateien darin auswählen (mittels gedrückt Halten von Strg) und hinzufügen.
+		Möglichkeit 1: 
+		Im Package Explorer rechtsklicken
+		-> Import
+		-> General > Existing Projects into Workspace
+		-> Den (entpackten) Ordner "GalaxySomething" auswählen
+		-> (ab hier dürftet ihr ganz gut nach eigenem Gutdünken durch den Dialog navigieren können. Und ich weiß grade nicht auswendig, wie's weiterging.)
 
-Danach lwjgl.jar ausklappen und die Javadoc-Location bearbeiten zu:
-	libraries/docs/lwjgl/javadoc
-(als URL, nicht als Archiv)
+		Möglichkeit 2:
+		In Eclipse ein neues Projekt mit dem Namen "GalaxySomething" anlegen.
+		Sämtlichen Inhalt des (entpackten) Ordners "GalaxySomething" da rein verschieben.
+		Danach in Eclipse das Project durch auswählen und F5 oder Rechtslick > "Refresh" aktualisieren.
 
-Da LWJGL mitunter etwas hardwarenah arbeitet, muss man es noch mit ein paar DLLs verlinken:
-Unter dem ausgeklappten lwjgl.jar die Native library location auswählen und bearbeiten zu dem Ordner in libraries/lwjgl/native, der zu eurem Betriebssystem passt.
+	Option 2: Das Projekt direkt via Git aus GitHub einbinden. Diese Option richtet sich nur an diejenigen, die sowieso schon wissen, wie das funktioniert.
+			  Daher führe ich sie hier mal nicht weiter aus. Sonstige Interessierte dürfen da gerne Google nutzen, weil das sonst auch den Rahmen sprengen würde ;-9
+
+
+Libraries konfigurieren:
+
+	Rechtsklick aufs Projekt, im Popup unten auf "Properties", dann links "Java Build Path" im Tab "Libraries" auf "Add JARS" klicken.
+	Dann zum Verzeichnis "libraries" navigieren und alle 8 .jar-Dateien darin auswählen (mittels gedrückt Halten von Strg) und hinzufügen.
+
+	Danach lwjgl.jar ausklappen und die Javadoc-Location bearbeiten zu:
+		libraries/docs/lwjgl/javadoc
+	(als URL, nicht als Archiv)
+
+	Da LWJGL mitunter etwas hardwarenah arbeitet, muss man es noch mit ein paar DLLs verlinken:
+	Unter dem ausgeklappten lwjgl.jar die Native library location auswählen und bearbeiten zu dem Ordner in libraries/lwjgl/native, der zu eurem Betriebssystem passt.
 
 Fertig :-)
