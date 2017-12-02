@@ -1,0 +1,14 @@
+
+
+Libraries hinzufügen:
+
+Rechtsklick aufs Projekt, im Popup unten auf "Properties", dann links "Java Build Path" im Tab "Libraries" auf "Add JARS" klicken. Dann zum Verzeichnis "libraries" navigieren und alle 8 .jar-Dateien darin auswählen (mittels gedrückt Halten von Strg) und hinzufügen.
+
+Danach lwjgl.jar ausklappen und die Javadoc-Location bearbeiten zu:
+	libraries/docs/lwjgl/javadoc
+(als URL, nicht als Archiv)
+
+Da LWJGL mitunter etwas hardwarenah arbeitet, muss man es noch mit ein paar DLLs verlinken:
+Unter dem ausgeklappten lwjgl.jar die Native library location auswählen und bearbeiten zu dem Ordner in libraries/lwjgl/native, der zu eurem Betriebssystem passt.
+
+Fertig :-)
